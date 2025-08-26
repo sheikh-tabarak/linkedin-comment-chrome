@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LinkedIn Comment Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="position: relative;">
+    <div class="popup-container">
+        <h2>LinkedIn Comment Generator</h2>
+
+        <div class="available-api"></div>
+        <div class="config-section"> <label for="apiKey">Gemini API Key:</label> <input type="password" id="apiKey"
+                placeholder="Enter your Gemini API key"> <button id="saveApiKey">Save</button> </div>
+        <div class="config-section"> <label for="commentStyle">Comment Style:</label> <select id="commentStyle">
+                <option value="professional">Professional</option>
+                <option value="casual">Casual</option>
+                <option value="supportive">Supportive</option>
+                <option value="insightful">Insightful</option>
+                <option value="questioning">Thought-provoking</option>
+            </select> </div>
+        <div class="config-section"> <label for="commentLength">Comment Length:</label> <select id="commentLength">
+                <option value="short">Short (1-2 sentences)</option>
+                <option value="medium">Medium (2-3 sentences)</option>
+                <option value="long">Long (3-4 sentences)</option>
+            </select> </div>
+        <div class="config-section"> <label for="customInstructions">Custom Instructions (optional):</label> <textarea
+                id="customInstructions"
+                placeholder="e.g., Always mention industry trends, Ask follow-up questions, etc."></textarea> </div>
+
+        <div class="config-section"> <label for="extraInstructions">Custom Instructions (optional):</label> <textarea
+                id="extraInstructions"
+                placeholder="e.g., Add extra Instructions, i.e APIs which are not in use, etc."></textarea> </div>
+
+
+        <button id="saveSettings">Save Settings</button>
+        <div class="status" id="status"></div>
+    </div>
+    <script src="popup.js"></script>
+
+    <footer style="position: absolute; bottom: 10px; left: 10px;"> Developed by <a target="_blank" href="https://www.devinsol.com">Devinsol</a> </footer>
+</body>
+
+</html>
