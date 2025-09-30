@@ -366,7 +366,7 @@ class LinkedInCommentGenerator {
         const prompt = this.buildPrompt(postContent, settings);
 
 
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
         let retries = 3;
 
@@ -398,7 +398,7 @@ class LinkedInCommentGenerator {
 
             // const commentText = await response.text()+'\n\n' + getAuthorMention(commentBox);
             const errText = await response.text();
-            // const sampleText = await response;
+            const sampleText = await response;
             // const sampleText = await response.statusText.error;
             console.error('Gemini API error response:', sampleText);
             // alert(`API request failed: ${response.status} -  - ${errText}`);
@@ -435,7 +435,7 @@ Guidelines:
 - Use appropriate LinkedIn etiquette
 - Don't use hashtags unless very relevant
 - Keep it conversational but professional
-IMPORTANT: Format the comment as **HTML** for LinkedIn editor
+IMPORTANT: Format the comment for LinkedIn editor
  • Wrap each paragraph in <p> … </p>
  • Use <br> only if a single line break is needed inside a paragraph
  • Do not include <html>, <body>, or any surrounding tags
